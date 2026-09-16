@@ -64,7 +64,9 @@ NEXT STAGES:
 
 
 
-3) Username enumeration — an incorrect username doesn't currently count against the login attempt limit, so usernames could be brute-forced separately from password.
+
+3)Username enumeration — an incorrect username doesn't currently count against the login attempt limit, so usernames could be brute-forced separately from password.
+
 
 
 
