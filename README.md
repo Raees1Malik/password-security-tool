@@ -33,8 +33,10 @@ DESIGN DECISIONS:
 NEXT STAGES:
 1)Hashing algorithm — currently uses raw SHA-256, which is designed to be fast. That's the wrong property for password hashing, since it makes brute-forcing a stolen hash cheap. 
   A slow, purpose-built KDF like PBKDF2, bcrypt, or Argon2 (with a high iteration count) would be the correct choice.
+
 2)Hardcoded admin unlock code — the admin code currently lives as a plaintext string in the source file. 
   It should be loaded from an environment variable or an external config file that isn't committed to version control.
+
 3) Username enumeration — an incorrect username doesn't currently count against the login attempt limit, so usernames could be brute-forced separately from password.
 
 
